@@ -1,0 +1,123 @@
+[
+  {
+    "id": "01",
+    "title": "AI Weekly Roundup",
+    "category": "Creative Edits",
+    "duration": 63,
+    "width": 1080,
+    "height": 1920,
+    "video": "02-video/media/01.mp4",
+    "poster": "01-website-va-anh/media/01.jpg",
+    "original": "v2_ai_weekly_news_roundup_sep13.mp4"
+  },
+  {
+    "id": "02",
+    "title": "Graphify × Claude",
+    "category": "Creative Edits",
+    "duration": 59,
+    "width": 1080,
+    "height": 1920,
+    "video": "02-video/media/02.mp4",
+    "poster": "01-website-va-anh/media/02.jpg",
+    "original": "v2_graphify_claude_token_saver.mp4"
+  },
+  {
+    "id": "03",
+    "title": "Hailuo Minimax H3",
+    "category": "Creative Edits",
+    "duration": 60,
+    "width": 1080,
+    "height": 1920,
+    "video": "02-video/media/03.mp4",
+    "poster": "01-website-va-anh/media/03.jpg",
+    "original": "v4_HAILUO MINIMAX H3.mp4"
+  },
+  {
+    "id": "04",
+    "title": "Metrics That Matter",
+    "category": "Ads & UGC",
+    "duration": 98,
+    "width": 1080,
+    "height": 1920,
+    "video": "02-video/media/04.mp4",
+    "poster": "01-website-va-anh/media/04.jpg",
+    "original": "Hook 1_Batch 9 - Metrics Important vs Not Important - $5M+ eCom Brands.mp4"
+  },
+  {
+    "id": "05",
+    "title": "Problem → Solution",
+    "category": "Ads & UGC",
+    "duration": 113,
+    "width": 1080,
+    "height": 1920,
+    "video": "03-video/media/05.mp4",
+    "poster": "01-website-va-anh/media/05.jpg",
+    "original": "Hook 1_Batch 9 - Problem Solution Board - $5M+ eCom Brands.mp4"
+  },
+  {
+    "id": "06",
+    "title": "Meta UGC",
+    "category": "Ads & UGC",
+    "duration": 70,
+    "width": 2160,
+    "height": 3840,
+    "video": "03-video/media/06.mp4",
+    "poster": "01-website-va-anh/media/06.jpg",
+    "original": "Hook 2_UGC Video #3 - Meta.mp4"
+  },
+  {
+    "id": "07",
+    "title": "The Gap",
+    "category": "Educational",
+    "duration": 76,
+    "width": 1080,
+    "height": 1920,
+    "video": "03-video/media/07.mp4",
+    "poster": "01-website-va-anh/media/07.jpg",
+    "original": "TALKING HEAD WITH PICTURES — The Gap.mp4"
+  },
+  {
+    "id": "08",
+    "title": "5 Systems for Agencies",
+    "category": "Educational",
+    "duration": 50,
+    "width": 2160,
+    "height": 3840,
+    "video": "04-video/media/08.mp4",
+    "poster": "01-website-va-anh/media/08.jpg",
+    "original": "v2_5 Systems Every Agency Needs.mp4"
+  },
+  {
+    "id": "09",
+    "title": "Ways to Get Clients",
+    "category": "Educational",
+    "duration": 36,
+    "width": 2160,
+    "height": 3840,
+    "video": "04-video/media/09.mp4",
+    "poster": "01-website-va-anh/media/09.jpg",
+    "original": "v2_S tier - ways to get clients.mp4"
+  },
+  {
+    "id": "10",
+    "title": "Neo Style",
+    "category": "AI-Generated",
+    "duration": 42,
+    "width": 1080,
+    "height": 1920,
+    "video": "04-video/media/10.mp4",
+    "poster": "01-website-va-anh/media/10.jpg",
+    "original": "Neo_Style_2_HyperFrames_FINAL.mp4"
+  },
+  {
+    "id": "11",
+    "title": "On Footage",
+    "category": "AI-Generated",
+    "duration": 51,
+    "width": 720,
+    "height": 1280,
+    "video": "04-video/media/11.mp4",
+    "poster": "01-website-va-anh/media/11.jpg",
+    "original": "PREVIEW_on_footage_CAPTIONED_v2.mp4"
+  }
+]
