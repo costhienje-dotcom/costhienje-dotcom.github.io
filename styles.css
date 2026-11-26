@@ -70,3 +70,4 @@
  .pricing{padding-bottom:65px}.price-grid{grid-template-columns:1fr}.price strong{font-size:30px}
  .category-meta{flex-direction:column;align-items:flex-end}
 }
+.hero-bottom p span{display:block;text-wrap:balance}
