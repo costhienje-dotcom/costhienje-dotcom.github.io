@@ -4,7 +4,7 @@ const modal=document.querySelector('#player');
 const video=document.querySelector('#player-video');
 let projects=[],current=-1,lastFocus=null;
 // Starting price shown next to each category. Edit the numbers here.
-const PRICES={'Creative Edits':'$80','Ads & UGC':'$50','Educational':'$35','AI-Powered Edits':'$20'};
+const PRICES={'Creative Edits':'$80','Ads & UGC':'$50','Educational':'$35','AI-Powered Edits':'$27'};
 // Fill every price on the page (pricing cards + hero "From" fact) from PRICES above.
 document.querySelectorAll('[data-price]').forEach(el=>{
  const key=el.dataset.price;
