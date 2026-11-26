@@ -3,17 +3,29 @@ const status=document.querySelector('#load-status');
 const modal=document.querySelector('#player');
 const video=document.querySelector('#player-video');
 let projects=[],current=-1,lastFocus=null;
+// Starting price shown next to each category. Edit the numbers here.
+const PRICES={'Creative Edits':'$80','Ads & UGC':'$50','Educational':'$35','AI-Powered Edits':'$20'};
+// Fill every price on the page (pricing cards + hero "From" fact) from PRICES above.
+document.querySelectorAll('[data-price]').forEach(el=>{
+ const key=el.dataset.price;
+ if(key==='min'){const nums=Object.values(PRICES).map(v=>parseFloat(v.replace(/[^0-9.]/g,''))).filter(n=>!isNaN(n));const low=Object.values(PRICES).find(v=>parseFloat(v.replace(/[^0-9.]/g,''))===Math.min(...nums));el.textContent=low||'[price]';return}
+ el.textContent=PRICES[key]||'[price]';
+});
+// "Email your brief": same address as the contact link, with a brief template.
+const contactLink=document.querySelector('.email');const briefLink=document.querySelector('#brief-link');
+if(contactLink&&briefLink){const body=['Video type: ','Number of videos: ','Raw footage length: ','Reference video (link): ','Deadline: '].join('\n');briefLink.href=contactLink.getAttribute('href').split('?')[0]+'?subject='+encodeURIComponent('Video editing brief')+'&body='+encodeURIComponent(body)}
 const duration=n=>`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;
 function render(){
- const categories=['Creative Edits','Ads & UGC','Educational','AI-Generated'];
+ const categories=['Creative Edits','Ads & UGC','Educational','AI-Powered Edits'];
  grid.replaceChildren(...categories.map((category,index)=>{
   const items=projects.filter(p=>p.category===category);
   const section=document.createElement('section');section.className='category-section';
   const headingId=`category-${index}`;section.setAttribute('aria-labelledby',headingId);
   const header=document.createElement('div');header.className='category-heading';
   const heading=document.createElement('h2');heading.id=headingId;heading.textContent=category;
-  const count=document.createElement('span');count.className='category-count';count.textContent=`${items.length} videos`;
-  header.append(heading,count);
+  const meta=document.createElement('div');meta.className='category-meta';
+  section.id='cat-'+category.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');  if(PRICES[category]){const price=document.createElement('a');price.className='category-price';price.href='#pricing';price.innerHTML=`From <strong></strong> / video <span aria-hidden="true">→</span>`;price.querySelector('strong').textContent=PRICES[category];meta.append(price)}
+  header.append(heading,meta);
   const cards=document.createElement('div');cards.className='project-grid';
   cards.append(...items.map((p,i)=>{
   const article=document.createElement('article');article.className='project-card';article.style.animationDelay=`${Math.min(i,7)*35}ms`;
@@ -21,7 +33,8 @@ function render(){
   const img=document.createElement('img');img.src=p.poster;img.alt=`${p.title} — video still`;img.loading='lazy';img.width=540;img.height=840;
   const play=document.createElement('span');play.className='play';play.textContent='▶';play.setAttribute('aria-hidden','true');
   const time=document.createElement('span');time.className='duration';time.textContent=duration(p.duration);
-  button.append(img,play,time);const title=document.createElement('h3');title.textContent=p.title;article.append(button,title);return article;
+  const preview=document.createElement('video');preview.className='preview';preview.muted=true;preview.loop=true;preview.playsInline=true;preview.preload='none';preview.setAttribute('aria-hidden','true');preview.dataset.src=p.video;
+  button.append(img,preview,play,time);const title=document.createElement('h3');title.textContent=p.title;article.append(button,title);return article;
   }));
   section.append(header,cards);return section;
  }));
@@ -37,6 +50,11 @@ function play(id){
  document.querySelector('#direct-video').href=p.video;
  document.querySelector('#previous').disabled=current===0;document.querySelector('#next').disabled=current===projects.length-1;
  video.poster=p.poster;video.src=p.video;video.load();video.play().catch(()=>{});
+}
+// Muted preview on hover (mouse only, skipped when the user prefers less motion).
+if(matchMedia('(hover:hover) and (prefers-reduced-motion:no-preference)').matches){
+ grid.addEventListener('pointerover',e=>{const c=e.target.closest('.project-cover');if(!c||c.contains(e.relatedTarget))return;const v=c.querySelector('.preview');if(!v.src)v.src=v.dataset.src+'#t=1';v.play().then(()=>c.classList.add('previewing')).catch(()=>{})});
+ grid.addEventListener('pointerout',e=>{const c=e.target.closest('.project-cover');if(!c||c.contains(e.relatedTarget))return;c.classList.remove('previewing');c.querySelector('.preview').pause()});
 }
 document.addEventListener('click',e=>{const button=e.target.closest('[data-project]');if(button)play(button.dataset.project)});
 document.querySelector('.close').addEventListener('click',()=>modal.close());

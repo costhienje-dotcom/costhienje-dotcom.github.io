@@ -99,25 +99,36 @@
     "original": "v2_S tier - ways to get clients.mp4"
   },
   {
-    "id": "10",
-    "title": "Neo Style",
-    "category": "AI-Generated",
-    "duration": 42,
+    "id": "12",
+    "title": "Sales Call Structure",
+    "category": "AI-Powered Edits",
+    "duration": 96,
     "width": 1080,
     "height": 1920,
-    "video": "04-video/media/10.mp4",
-    "poster": "01-website-va-anh/media/10.jpg",
-    "original": "Neo_Style_2_HyperFrames_FINAL.mp4"
+    "video": "05-video/media/12.mp4",
+    "poster": "01-website-va-anh/media/12.jpg",
+    "original": "Sales call structure (Style 2).mp4"
   },
   {
-    "id": "11",
-    "title": "On Footage",
-    "category": "AI-Generated",
-    "duration": 51,
-    "width": 720,
-    "height": 1280,
-    "video": "04-video/media/11.mp4",
-    "poster": "01-website-va-anh/media/11.jpg",
-    "original": "PREVIEW_on_footage_CAPTIONED_v2.mp4"
+    "id": "13",
+    "title": "Seed vs Ritual",
+    "category": "AI-Powered Edits",
+    "duration": 140,
+    "width": 1080,
+    "height": 1920,
+    "video": "05-video/media/13.mp4",
+    "poster": "01-website-va-anh/media/13.jpg",
+    "original": "Seed vs Ritual_v1.mp4"
+  },
+  {
+    "id": "14",
+    "title": "Step-Up in Basis",
+    "category": "AI-Powered Edits",
+    "duration": 61,
+    "width": 1080,
+    "height": 1920,
+    "video": "05-video/media/14.mp4",
+    "poster": "01-website-va-anh/media/14.jpg",
+    "original": "Step up in basis.mp4"
   }
 ]
